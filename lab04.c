@@ -61,7 +61,7 @@ entrada padrão (normalmente o teclado). O conjunto de teste é composto por 6 l
 devem ser de 0 a 9.
 
 2. Em cada uma das 5 linhas seguintes são dadas as informações da jogada. Cada
-linha contém um valor inteiro X, 1  X  9, que representa o número a ser
+linha contém um valor inteiro X, 1 <= X <= 9, que representa o número a ser
 inserido, seguido de um espaço e a posição desejada de inserção. Note que a
 primeira posição da lista é a posição 0.
 
