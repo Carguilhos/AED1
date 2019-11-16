@@ -1,5 +1,8 @@
 /*                       Locadora de jogos
 
+Prof. Valério Rosset – UNIFESP, Unidade Pq. Tecnológico, sala 05
+E-mail: vrosset@unifesp.br
+
 1 DEFINIÇÃO DO PROBLEMA
 
 Com a popularização da internet e de plataformas como Netflix, diversas empresas de
