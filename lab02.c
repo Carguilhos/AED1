@@ -25,14 +25,14 @@ ENTRADA
 
 A entrada contém um único conjunto de teste, que deve ser lido do dispositivo de
 entrada padrão (normalmente o teclado). O conjunto de teste é composto por P + 1
-linhas, 1  P  100.
+linhas, 1 <= P <= 100.
 
-1. A primeira linha contém um valor inteiro P, 1  P  100, que representa a
+1. A primeira linha contém um valor inteiro P, 1 <= P <= 100, que representa a
 quantidade de movimentações (reservas e utilizações) que serão realizadas.
 
 2. Em cada uma das P linhas seguintes são dadas as informações. Cada linha
 contém um valor inteiro - ’1’ para reservar ou ’2’ para utilizar seguida de um
-espaço e o número da carteira (N), 10000  N  90000.
+espaço e o número da carteira (N), 10000 <= N <= 90000.
 
 Para as operações de entrada, considere a sintaxe:
 
