@@ -34,14 +34,14 @@ ENTRADA
 
 A entrada contém um único conjunto de teste, que deve ser lido do dispositivo de
 entrada padrão (normalmente o teclado). O conjunto de teste é composto por L + 1
-linhas, 1  L  100.
+linhas, 1 <= L <= 100.
 
-1. A primeira linha contém um valor inteiro L, 1  L  100, que representa a
+1. A primeira linha contém um valor inteiro L, 1 <= L <= 100, que representa a
 quantidade de movimentações (cadastros, locações, adicições ou devoluções e
 remoções) que serão realizadas.
 
 2. Em cada uma das L linhas seguintes são dadas as informações. Cada linha
-contém um valor inteiro J, 1  J  4, que representa a operação desejada,
+contém um valor inteiro J, 1 <= J <= 4, que representa a operação desejada,
 seguida de um espaço e o restante das informações necessárias para cada
 operação:
 
