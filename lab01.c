@@ -1,5 +1,8 @@
 /*                       Gerenciamento de Empréstimo de Livros
 
+Prof. Valério Rosset – UNIFESP, Unidade Pq. Tecnológico, sala 05
+E-mail: vrosset@unifesp.br
+
 1 DEFINIÇÃO DO PROBLEMA
 
 A biblioteca do ICT permite que os usuários reservem livros que não estão disponíveis.
