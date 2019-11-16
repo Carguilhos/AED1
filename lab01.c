@@ -25,14 +25,14 @@ ENTRADA
 
 A entrada contém um único conjunto de teste, que deve ser lido do dispositivo de
 entrada padrão (normalmente o teclado). O conjunto de teste é composto por L + 1
-linhas, 1  L  100.
+linhas, 1 <= L <= 100.
 
-1. A primeira linha contém um valor inteiro L, 1  L  100, que representa a
+1. A primeira linha contém um valor inteiro L, 1 <= L <= 100, que representa a
 quantidade de movimentações (reservas e retiradas) serão realizadas.
 
 2. Em cada uma das L linhas seguintes são dadas as informações. Cada linha
 contém um valor inteiro - ’1’ para reservar ou ’2’ para retirar seguida de um
-espaço e o número do livro (N), 1  N  100.
+espaço e o número do livro (N), 1 <= N <= 100.
 
 Para as operações de entrada, considere a sintaxe:
 
