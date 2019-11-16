@@ -1,9 +1,131 @@
-/* Programa: Laborat�rio #2 - lab2.c
+/*                       Ida á piscina
+
+1 DEFINIÇÃO DO PROBLEMA
+
+Quem não gosta de ir á piscina? Principalmente quando se é um atleta da natação.
+Em São José dos Campos, uma piscina pública foi inaugurada em 2012 para atletas
+da cidade usarem durante a semana em seus treinos e no fim de semana ela é aberta
+a população. Nesse sentido, é preciso de um sistema que gerencie as idas dos atletas
+á psicina durante a semana.
+
+TAREFA A
+
+Desenvolva um algoritmo em linguagem C - utilizando lista estática encadeada - que
+forneça uma lista com os números de carteira dos atletas que realizaram a reserva
+da piscina naquele dia. Além disso, seu algoritmo também deve fornecer quantos
+usuários de cada ano realizaram a reserva da piscina.
+Para determinar o ano de inscrição de cada atleta, considere que o número da carteira
+muda com o ano em que foi solicitada a inscrição . Por exemplo, todos os atletas que
+entraram em 2013 possuem uma carteira de 5 dígitos que inicia com 2. Os atletas que
+entraram em 2014, possuem uma carteira de 5 dígitos que inicia com 3. Os atletas
+que entraram em 2015 possuem uma carteira de 5 dígitos que inicia com 4, assim por
+diante.
+
+ENTRADA
+
+A entrada contém um único conjunto de teste, que deve ser lido do dispositivo de
+entrada padrão (normalmente o teclado). O conjunto de teste é composto por P + 1
+linhas, 1  P  100.
+
+1. A primeira linha contém um valor inteiro P, 1  P  100, que representa a
+quantidade de movimentações (reservas e utilizações) que serão realizadas.
+
+2. Em cada uma das P linhas seguintes são dadas as informações. Cada linha
+contém um valor inteiro - ’1’ para reservar ou ’2’ para utilizar seguida de um
+espaço e o número da carteira (N), 10000  N  90000.
+
+Para as operações de entrada, considere a sintaxe:
+
+scanf("%d",&variavel);
+scanf("%d %d",&variavel1, &variavel2);
+
+SAÍDA
+
+Como saída padrão, seu programa deve imprimir uma lista com os números da carteira
+dos atletas que estão na lista de reserva. Quando um atleta entra na lista de reserva
+(1) seu número da carteira deve ser inserido na lista e quando um atleta utiliza a piscina,
+sai da lista de reserva (S) seu número da carteira. A lista deve estar ordenada
+com base nos números das carteiras. Quando ocorrer uma entrada (1) ou uma saída
+(2) a lista deve ser impressa. Além disso, as seguintes mensagens também devem
+aparecer:
+
+1. Tentativa de reserva se a lista estiver cheia: "Dia cheio".
+
+2. Tentativa de utilização de um número da carteira que não está na lista: "Não foi
+reservado".
+
+Ao final da execução, você deverá imprimir quantos atletas de cada ano realizaram a
+reserva a piscina naquele dia. Para as operações de saída, considere a sintaxe:
+
+printf("Instrucao de saidann");
+printf("%d ", itemLista);
+printf("%d: %d", ano, quantidade);
+
+                         Entrada Saída
+                         14      65436
+                         1 65436 65436 76396
+                         1 76396 65398 65436 76396
+                         1 65398 18679 65398 65436 76396
+                         1 18679 18679 27657 65398 65436 76396
+                         1 27657 18679 27657 56478 65398 65436 76396
+                         1 56478 18679 27657 56478 65398 65436 76396 87635
+                         1 87635 18679 27657 56478 65398 65436 65478 76396 87635
+                         1 65478 18679 27657 56478 65398 65436 65478 76389 76396 87635
+                         1 76389 18679 27657 56478 65398 65436 65478 76389 76396 87349 87635
+                         1 87349 Dia cheio
+                         1 59674 18679 27657 56478 65398 65436 65478 76389 76396 87349 87635
+                         2 27657 18679 56478 65398 65436 65478 76389 76396 87349 87635
+                         2 76396 18679 56478 65398 65436 65478 76389 87349 87635
+                         2 65439 Não foi reservado
+                                 18679 56478 65398 65436 65478 76389 87349 87635
+                                 2012: 1
+                                 2013: 1
+                                 2014: 0
+                                 2015: 0
+                                 2016: 1
+                                 2017: 3
+                                 2018: 2
+                                 2019: 2
+
+                         Entrada Saída
+                         3       Não foi reservado
+                         2 12956
+                         1 87698 87698
+                         2 87698
+                                 2012: 0
+                                 2013: 0
+                                 2014: 0
+                                 2015: 0
+                                 2016: 0
+                                 2017: 0
+                                 2018: 0
+                                 2019: 1
+                                 
+OBSERVAÇÕES
+
+ O enunciado da definição do problema é fictício e foi criado para o propósito
+desse exercício.
+
+ É fundamental que o programa imprima apenas o valor de saída.
+
+ Os exercícios devem ser postados no site http://judge.sjc.unifesp.br.
+
+ Cada aluno deverá postar apenas um exercício dentro da data limite.
+
+ A resolução submetida deve utilizar a estrutura de dados definida no enunciado
+do exercício.
+
+ Os plágios serão penalizados. Como não será possível saber quem copiou,
+todos os casos envolvidos receberão punições iguais, portanto, não divulgue
+seu código.*/
+
+// #########################################################################
+
+/* Programa: Laboratório #2 - lab2.c
  
    Autor: Carlos Guilherme Moraes
    
    Versao: 1.0 - 17/07/2019
- 
 */
 
 // ##################### Bibliotecas Externas ##############################
@@ -131,7 +253,7 @@ int removeElemento (tipoListaEE *listaAux, int carteira)
       }
     }
   }
-  printf("N�o foi reservado\n");
+  printf("Não foi reservado\n");
   if (listaAux->primeiro == -1){
     printf("\n");
     return -1;
