@@ -1,7 +1,6 @@
 /*                       Gerenciamento de Empréstimo de Livros
 
-Prof. Valério Rosset – UNIFESP, Unidade Pq. Tecnológico, sala 05
-E-mail: vrosset@unifesp.br
+Prof. Valério Rosset – UNIFESP
 
 1 DEFINIÇÃO DO PROBLEMA
 
