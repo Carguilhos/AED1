@@ -1,5 +1,8 @@
 /*                       Ida á piscina
 
+Prof. Valério Rosset – UNIFESP, Unidade Pq. Tecnológico, sala 05
+E-mail: vrosset@unifesp.br
+
 1 DEFINIÇÃO DO PROBLEMA
 
 Quem não gosta de ir á piscina? Principalmente quando se é um atleta da natação.
