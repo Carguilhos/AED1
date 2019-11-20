@@ -1,12 +1,12 @@
-﻿/* Programa: Laboratório #8 - lab8.c
- 
+/* Programa: Laborat�rio #8 - lab8.c
+
    Autor: Carlos Guilherme Moraes
- 
+
    Versao: 1.0 - 06/09/2019
 */
- 
+
 // ##################### Bibliotecas Externas ##############################
- 
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -14,8 +14,8 @@
 // ########################## TAD X.h ######################################
 
 struct noArvoreBinaria {
-	char nome[100];
-	char pai[100];
+	char nome[20];
+	char pai[20];
 	char sexo;
 	int nascimento;
 	struct noArvoreBinaria *esq;
@@ -45,9 +45,9 @@ tipoNoAB *novoElemento()
 tipoNoAB *encontraPai(tipoNoAB *Aux, char *noPai)
 {
 	if (Aux != NULL) {
-		if (strcmp(Aux->nome, noPai) == 0)
+		if (strcmp(Aux->nome, noPai) == 0) {
 			return Aux;
-		else {
+		} else {
 			tipoNoAB *NovoPai = encontraPai(Aux->esq, noPai);
 			if (NovoPai == NULL)
 				NovoPai = encontraPai(Aux->dir, noPai);
@@ -71,15 +71,15 @@ void removerNo(tipoNoAB *Aux)
 
 void remover(tipoNoAB *Aux)
 {
-	char nome[50];
+	char nome[20];
 	scanf("%s", nome);
 	tipoNoAB *aux2;
 	aux2 = encontraPai(Aux, nome);
 	tipoNoAB *pai;
 	pai = encontraPai(Aux, aux2->pai);
 	if (pai == NULL)
-		free(Aux);
-	if (strcmp(pai->esq->nome, nome) == 0)
+		;
+	else if (pai->esq != NULL && strcmp(pai->esq->nome, nome) == 0)
 		pai->esq = NULL;
 	else
 		pai->dir = NULL;
@@ -92,9 +92,15 @@ void inserir(tipoNoAB *Aux)
 	novoNo = novoElemento();
 	tipoNoAB *pai;
 	pai = encontraPai(Aux, novoNo->pai);
-	if (pai->esq == NULL)
+	if (pai == NULL);
+	else if (pai->esq == NULL)
 		pai->esq = novoNo;
-	else
+	else if (pai->esq != NULL &&
+		 (pai->esq->sexo == 'F' && pai->esq->nascimento < 2011 &&
+		  novoNo->sexo == 'M')) {
+		pai->dir = pai->esq;
+		pai->esq = novoNo;
+	} else
 		pai->dir = novoNo;
 }
 
